@@ -89,7 +89,7 @@ const EnhancedForm = () => {
         data.append("address", formData.address);
         data.append("image", formData.file);
 
-        const response = await axios.post("https://marwab.onrender.com", data, {
+        const response = await axios.post("https://marwab.onrender.com/api/userdetails", data, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

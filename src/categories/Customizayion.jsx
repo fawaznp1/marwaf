@@ -53,7 +53,7 @@ function CustomizationComponent() {
 
     try {
       // Send the data to the backend
-      const response = await axios.post('https://marwab.onrender.com', data, {
+      const response = await axios.post('https://marwab.onrender.com/api/customization', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
