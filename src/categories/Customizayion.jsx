@@ -74,7 +74,7 @@ function CustomizationComponent() {
       //toast.success('Customization request submitted successfully!');
     } catch (error) {
       console.error(error);
-      console.error('Error Response:', error.response);
+      toast.error('Please fill everything correctly'); //, error.response
     }
     console.log(data);
   };

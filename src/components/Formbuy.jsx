@@ -194,7 +194,7 @@ const EnhancedForm = () => {
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="email" className="form-label">
-              Email*
+              Email* (Order details will be sent to this email)
             </label>
             <input
               type="email"
@@ -238,7 +238,7 @@ const EnhancedForm = () => {
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="file" className="form-label">
-              Upload Image*
+              Payment Screenshot*
             </label>
             <input
               type="file"
