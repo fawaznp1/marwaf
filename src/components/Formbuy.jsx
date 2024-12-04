@@ -151,6 +151,7 @@ const EnhancedForm = () => {
 
       <div className="d-flex flex-column align-items-center">
         <img src={Qrcode} style={{ width: "150px" }} alt="UPI QR code" />
+        <h6>Hold image to download</h6>
         <h6>UPI ID: {upiId}</h6>
         <button
           onClick={handleCopy}
@@ -229,7 +230,7 @@ const EnhancedForm = () => {
             <textarea
               className={`form-control ${errors.address ? "is-invalid" : ""}`}
               id="address"
-              placeholder="Enter your address"
+              placeholder="Enter your address with nearby landmark"
               value={formData.address}
               onChange={handleInputChange}
               onBlur={handleBlur}
@@ -238,7 +239,7 @@ const EnhancedForm = () => {
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="file" className="form-label">
-              Payment Screenshot*
+              Payment Screenshot* (COD currently not available!)
             </label>
             <input
               type="file"

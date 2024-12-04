@@ -100,7 +100,7 @@ function CustomizationComponent() {
                  className="custom-dropdown"
                  style={{maxWidth: '100%'}}
               >
-               
+               <option value="">Select one category</option>
                 <option>Gift Hamper</option>
                 <option>Henna Design</option>
                 <option>Frames</option>

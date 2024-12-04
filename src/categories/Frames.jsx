@@ -1,21 +1,33 @@
-import React from "react";
-import frames1 from "../images/IMG_0602.jpg";
+import React from 'react';
+import { Card,Button } from 'react-bootstrap';
 import { useCart } from "../pages/Cartcontext";
-import "./Frames.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import brace1 from '../images/frames/f11.jpg';
+import brace2 from '../images/frames/frames1.PNG';
+import brace3 from '../images/frames/f3.jpg';
+import brace4 from '../images/frames/f4.jpg';
+import brace5 from '../images/frames/f5.jpg';
+import brace6 from '../images/frames/f6.jpg';
+import brace7 from '../images/frames/f7.jpg';
+import brace8 from '../images/frames/f8.jpg';
+import brace20 from '../images/frames/f20.webp';
 
-const Frames = () => {
-  const { addToCart } = useCart(); 
+import './Frames.css';
 
+
+function Bracelet() {
+  const { addToCart } = useCart();
+
+  // Updated frameItems with unique image URLs
   const frameItems = [
-    { id: 1, name: "Elegant Oak Frame", price: 500 },
-    { id: 2, name: "Classic Walnut Frame", price: 650 },
-    { id: 3, name: "Modern Black Frame", price: 700 },
-    { id: 4, name: "Rustic Pine Frame", price: 850 },
-    { id: 5, name: "Golden Border Frame", price: 1200 },
-    { id: 6, name: "Golden Border Frame", price: 1200 },
-    { id: 7, name: "Luxury Mahogany Frame", price: 150 },
-    { id: 8, name: "Luxury Mahogany Frame", price: 150 }
+    { id: 1, name: "Elegant Oak Frame", price: 500, image: brace1 },
+    { id: 2, name: "Classic Walnut Frame", price: 650, image: brace2 },
+    { id: 3, name: "Modern Black Frame", price: 700, image: brace3 },
+    { id: 4, name: "Rustic Pine Frame", price: 850, image: brace4 },
+    { id: 5, name: "Golden Border Frame", price: 1200, image: brace5 },
+    { id: 6, name: "Luxury Mahogany Frame", price: 150, image: brace6 },
+    { id: 7, name: "Luxury Mahogany Frame", price: 150, image: brace7 },
+    { id: 8, name: "Luxury Mahogany Frame", price: 150, image: brace8 }
   ];
 
   const handleAddToCart = (item) => {
@@ -29,12 +41,17 @@ const Frames = () => {
     navigate("/form"); // Navigate to the EnhancedForm component
   };
 
+  const handlecustomize =()=>{
+    navigate("/custom");
+  }
+
   return (
     <div className="frames card-grid mb-3">
       {frameItems.map((item) => (
         <div className="card" key={item.id}>
           <div className="image_container">
-            <img src={frames1} alt={item.name} className="image" />
+            {/* Dynamically set the image for each card */}
+            <img src={item.image} alt={item.name} className="image" loading="lazy" />
           </div>
           <div className="title">
             <span>{item.name}</span>
@@ -45,8 +62,7 @@ const Frames = () => {
             </div>
             <button
               className="cart-button"
-/*               onClick={() => handleAddToCart(item)} 
- */              onClick={handleBuyNow}
+              onClick={handleBuyNow}
             >
               <i className="fa-solid fa-cart-shopping"></i>
               <span>Buy now</span>
@@ -54,7 +70,32 @@ const Frames = () => {
           </div>
         </div>
       ))}
+      <div>
+      <Card className="text-center">
+  <Card.Img 
+    variant="top" 
+    src={brace20} 
+    alt="Sample Image"
+    style={{ objectFit: 'cover', height: '200px', width: '100%' }}
+  />
+  <Card.Body>
+    
+    <Card.Text className="text-white">You can customize to any size as your convenience.</Card.Text>
+    <Button 
+      variant="primary" 
+      onClick={() => navigate("/custom")}
+      className="mt-3"
+    >
+      Customize now
+    </Button>
+  </Card.Body>
+  
+</Card>
+
+</div>
+
     </div>
   );
-};
-export default Frames;
+}
+
+export default Bracelet;

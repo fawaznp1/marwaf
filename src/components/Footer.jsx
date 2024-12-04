@@ -37,17 +37,7 @@ export default function App() {
         <section className='mb-4'>
           <MDBRow>
             <MDBCol xs='auto' className='d-flex justify-content-center'>
-              {/* <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-                <MDBIcon fab icon='facebook-f' />
-              </MDBBtn>
-
-              <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-                <MDBIcon fab icon='twitter' />
-              </MDBBtn> */}
-
-             {/*  <MDBBtn outline color="light" floating className='m-1' href='#'  role='button'>
-                <MDBIcon fab icon='google' />
-              </MDBBtn> */}
+             
 
               <MDBBtn outline color="light" floating className='m-1' style={{ width: '50px', 
         height: '40px', 

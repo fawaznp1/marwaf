@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import marwaimage1 from '../images/logo3.PNG';
-import mehandi1 from '../images/mehandi2.jpg';
+import mehandi1 from '../images/henna/h1.jpg';
 import './Home.css';
 import './Lettera.css'
-import framesimage from '../images/frames1.PNG'
-import giftimage from '../images/gift1.jpg'
-import brimage from '../images/br1.jpg'
+import framesimage from '../images/frames/f1.jpg'
+import giftimage from '../images/gifts/g1.jpg'
+import brimage from '../images/bracelets/b1.jpg'
 
 
 function Home() {
