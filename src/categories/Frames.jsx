@@ -20,14 +20,14 @@ function Bracelet() {
 
   // Updated frameItems with unique image URLs
   const frameItems = [
-    { id: 1, name: "Elegant Oak Frame", price: 500, image: brace1 },
-    { id: 2, name: "Classic Walnut Frame", price: 650, image: brace2 },
-    { id: 3, name: "Modern Black Frame", price: 700, image: brace3 },
-    { id: 4, name: "Rustic Pine Frame", price: 850, image: brace4 },
-    { id: 5, name: "Golden Border Frame", price: 1200, image: brace5 },
-    { id: 6, name: "Luxury Mahogany Frame", price: 150, image: brace6 },
-    { id: 7, name: "Luxury Mahogany Frame", price: 150, image: brace7 },
-    { id: 8, name: "Luxury Mahogany Frame", price: 150, image: brace8 }
+    { id: 1, name: "Elegant Oak Frame", price: 850, image: brace1 },
+    { id: 2, name: "Classic Walnut Frame", price: 180, image: brace2 },
+    { id: 3, name: "Modern Black Frame", price: 900, image: brace3 },
+    { id: 4, name: "Rustic Pine Frame", price: 200, image: brace4 },
+    { id: 5, name: "Golden Border Frame", price: 650, image: brace5 },
+    { id: 6, name: "Luxury Mahogany Frame", price: 750, image: brace6 },
+    { id: 7, name: "Luxury Mahogany Frame", price: 450, image: brace7 },
+    { id: 8, name: "Luxury Mahogany Frame", price: 750, image: brace8 }
   ];
 
   const handleAddToCart = (item) => {

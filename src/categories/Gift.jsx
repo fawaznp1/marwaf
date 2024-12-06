@@ -24,17 +24,17 @@ function Bracelet() {
 
   // Updated frameItems with unique image URLs
   const frameItems = [
-    { id: 1, name: "The Perfect Present Box", price: 500, image: brace1 },
-    { id: 2, name: "Cherished Moments Hamper", price: 650, image: brace2 },
-    { id: 3, name: "Golden Wishes Gift Set", price: 700, image: brace3 },
-    { id: 4, name: "Divine Serenity Hamper", price: 850, image: brace4 },
-    { id: 5, name: "Gourmet Delight Hamper", price: 1200, image: brace5 },
-    { id: 6, name: "Sparkling Joy Hamper", price: 150, image: brace6 },
-    { id: 7, name: "The Celebration Box", price: 150, image: brace7 },
-    { id: 8, name: "Pure Delight Basket", price: 150, image: brace9 },
-    { id: 9, name: "The Grand Gesture Gift", price: 150, image: brace10 },
-    { id: 10, name: "The Luxury Treat Box", price: 150, image: brace11 },
-    { id: 11, name: "Radiance Gift Set", price: 150, image: brace12 },
+    { id: 1, name: "The Perfect Present Box", price: 750, image: brace1 },
+    { id: 2, name: "Cherished Moments Hamper", price: 800, image: brace2 },
+    { id: 3, name: "Golden Wishes Gift Set", price: 870, image: brace3 },
+    { id: 4, name: "Divine Serenity Hamper", price: 350, image: brace4 },
+    { id: 5, name: "The Luxury Treat Box", price: 1800, image: brace5 },
+    { id: 6, name: "Sparkling Joy Hamper", price: 550, image: brace6 },
+    { id: 7, name: "The Celebration Box", price: 1850, image: brace7 },
+    { id: 8, name: "Pure Delight Basket", price: 1900, image: brace9 },
+    { id: 9, name: "The Grand Gesture Gift", price: 2000, image: brace10 },
+    { id: 10, name: "Gourmet Delight Hamper", price: 850, image: brace11 },
+    { id: 11, name: "Radiance Gift Set", price: 980, image: brace12 },
   ];
 
   const handleAddToCart = (item) => {

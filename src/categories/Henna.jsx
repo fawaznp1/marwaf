@@ -17,12 +17,12 @@ function Henna() {
   // Sample data with unique IDs and images
   const hennaItems = [
     { id: 101, text: 'Beautiful Henna Design 1', price: 500, image: hennaimage1 },
-    { id: 107, text: 'Festive Henna Design 6', price: 700, image: hennaimage7 },
-    { id: 102, text: 'Elegant Henna Design 2', price: 750, image: hennaimage2 },
+    { id: 102, text: 'Elegant Henna Design 2', price: 750, image: hennaimage7 },
     { id: 103, text: 'Traditional Henna Design 3', price: 600, image: hennaimage3 },
     { id: 104, text: 'Modern Henna Design 4', price: 800, image: hennaimage4 },
     { id: 105, text: 'Unique Henna Design 5', price: 650, image: hennaimage5 },
     { id: 106, text: 'Festive Henna Design 6', price: 700, image: hennaimage6 },
+    { id: 107, text: 'Festive Henna Design 7', price: 700, image: hennaimage2 },
     
   ];
 
