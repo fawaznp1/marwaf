@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import marwaimage1 from '../images/logo3.PNG';
+import marwaimage1 from '../images/logo1.jpg';
 import mehandi1 from '../images/henna/h1.jpg';
 import './Home.css';
 import './Lettera.css'
@@ -14,7 +14,6 @@ function Home() {
     <>
       <div className="container mt-2">
         <div className="row">
-          {/* First Column for Image */}
           <div className="col-md-6 d-flex align-items-center justify-content-center mt-3">
             <img
               src={marwaimage1}
@@ -23,7 +22,6 @@ function Home() {
               style={{borderRadius:'15px'}}
             />
           </div>
-          {/* Second Column for Text */}
           <div className="col-md-6 d-flex align-items-center mt-2">
             <div>
               <div className='letteranim' >
@@ -31,7 +29,7 @@ function Home() {
  */}                <h1 class="cssanimation open sequence">marwaarts.in</h1>
               </div>
               <p className='mt-3' style={{fontSize:'1.6rem'}}>
-               Your one-stop destination for <span style={{color:'#d65c5c'}}>gifts</span> ,   <span style={{color:'#6443db'}}>hampers</span> and <span style={{color:'#09c338'}}>frames</span>   offering affordable prices and the best quality to make every occasion special.              
+               Your one-stop destination for <span style={{color:'#d65c5c'}}>gifts</span> ,   <span style={{color:'#6443db'}}>hampers</span> , <span style={{color:'#09c338'}}>frames</span> and <span style={{color:'#fc03d3'}}>Calligraphy</span>   offering affordable prices and the best quality to make every occasion special.              
                </p>
 
 
@@ -43,7 +41,6 @@ function Home() {
         <section className="mt-5">
           <div className="row justify-content-center">
             <h1 className='text-center mb-5' >Categories</h1>
-            {/* First Row of Cards */}
             <div className="col-md-6 mb-4 d-flex justify-content-center">
               <Link to="/frames" className="text-decoration-none">
                 <div className="card" style={{ width: '100%' }}>

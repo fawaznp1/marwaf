@@ -105,6 +105,7 @@ function CustomizationComponent() {
                 <option>Henna Design</option>
                 <option>Frames</option>
                 <option>Bracelets</option>
+                <option >Calligraphy</option>
               </Form.Control>
               <Form.Control.Feedback type="invalid">
                 Please select a customization type.
