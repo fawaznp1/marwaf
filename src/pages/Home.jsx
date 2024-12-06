@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import marwaimage1 from '../images/logo1.jpg';
+import marwaimage1 from '../images/logo2.jpg';
 import mehandi1 from '../images/henna/h1.jpg';
 import './Home.css';
 import './Lettera.css'
