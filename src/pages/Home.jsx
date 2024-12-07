@@ -48,6 +48,10 @@ function Home() {
                   <div className="card-body">
                     <h5 className="card-title">Frames</h5>
                     <p className="card-text">Discover a wide range of stylish frames perfect for showcasing your cherished moments. Affordable, high-quality designs to suit every home and occasion.</p>
+                    <div className="text-center">
+                     <button className="btn btn-dark">Explore Now <i class="fa-solid fa-square-arrow-up-right ms-1"></i></button>
+                    </div>
+
                   </div>
                 </div>
               </Link>
@@ -59,6 +63,9 @@ function Home() {
                   <div className="card-body">
                     <h5 className="card-title">Gift Hamper</h5>
                     <p className="card-text">Discover our thoughtfully curated gift hampers at Marwa Arts, ideal for every occasion. Packed with premium products to delight your loved ones.</p>
+                    <div className="text-center">
+                     <button className="btn btn-dark">Explore Now <i class="fa-solid fa-square-arrow-up-right ms-1"></i></button>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -74,6 +81,9 @@ function Home() {
                   <div className="card-body">
                     <h5 className="card-title">Bracelets</h5>
                     <p className="card-text">Explore our collection of stylish bracelets at Marwa Arts, designed to add a touch of elegance to any outfit. Perfect for gifting or treating yourself!</p>
+                    <div className="text-center">
+                     <button className="btn btn-dark">Explore Now <i class="fa-solid fa-square-arrow-up-right ms-1"></i></button>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -85,6 +95,9 @@ function Home() {
                   <div className="card-body">
                     <h5 className="card-title">Henna Design</h5>
                     <p className="card-text">Explore beautiful, intricate henna designs at Marwa Arts, perfect for every celebration. Handcrafted with precision to add elegance to your special moments.</p>
+                    <div className="text-center">
+                     <button className="btn btn-dark">Explore Now <i class="fa-solid fa-square-arrow-up-right ms-1"></i></button>
+                    </div>
                   </div>
                 </div>
               </Link>
