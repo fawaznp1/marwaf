@@ -19,14 +19,14 @@ function Bracelet() {
 
   // Updated frameItems with unique image URLs
   const frameItems = [
-    { id: 1, name: "Elegant Charm Bracelet (4 Q)", price: 230, image: brace1 },
-    { id: 2, name: "Timeless Beauty Bangle", price: 60, image: brace2 },
-    { id: 3, name: "Serenity Stone Bracelet (1 Q)", price: 40, image: brace3 },
-    { id: 4, name: "Celestial Sparkle Bracelet", price: 60, image: brace4 },
-    { id: 5, name: "Graceful Love Bangle (1 Q)", price: 70, image: brace5 },
-    { id: 6, name: "Mystic Aura Bracelet", price: 80, image: brace6 },
-    { id: 7, name: "Divine Embrace Bangle", price: 80, image: brace7 },
-    { id: 8, name: "Midnight Glow Bangle", price: 20, image: brace8 }
+    { id: 1, name: "Elegant Charm Bracelet (4 Q)", price: 219, image: brace1 },
+    { id: 2, name: "Timeless Beauty Bangle", price: 59, image: brace2 },
+    { id: 3, name: "Serenity Stone Bracelet (1 Q)", price: 39, image: brace3 },
+    { id: 4, name: "Celestial Sparkle Bracelet", price: 59, image: brace4 },
+    { id: 5, name: "Graceful Love Bangle (1 Q)", price: 69, image: brace5 },
+    { id: 6, name: "Mystic Aura Bracelet", price: 79, image: brace6 },
+    { id: 7, name: "Divine Embrace Bangle", price: 79, image: brace7 },
+    { id: 8, name: "Midnight Glow Bangle", price: 19, image: brace8 }
   ];
 
   const handleAddToCart = (item) => {

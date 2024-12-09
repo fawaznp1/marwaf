@@ -89,7 +89,12 @@ export default function App() {
 
         <section className='mb-2 mt-3'>
           <p>
-            Connecting you with quality and care – Marwa Arts, your one-stop destination for unique gifts and art.
+            Connecting you with quality and care – Marwa Arts, your one-stop destination for unique art.
+          </p>
+          <hr />
+          <h3>Advertise With Us!</h3>
+          <p>
+          Promote your business on our platform. Contact us today to discover advertising & promotional opportunities. Reach your audience effortlessly!
           </p>
         </section>
         
