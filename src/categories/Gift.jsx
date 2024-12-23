@@ -14,6 +14,7 @@ import brace9 from '../images/gifts/g9.jpg';
 import brace10 from '../images/gifts/g10.webp';
 import brace11 from '../images/gifts/g11.jpg';
 import brace12 from '../images/gifts/g12.webp';
+import brace13 from '../images/gifts/g14.jpeg';
 
 
 import './Frames.css';
@@ -35,6 +36,7 @@ function Bracelet() {
     { id: 9, name: "The Grand Gesture Gift", price: 1990, image: brace10 },
     { id: 10, name: "Gourmet Delight Hamper", price: 849, image: brace11 },
     { id: 11, name: "Radiance Gift Set", price: 979, image: brace12 },
+    { id: 12, name: "Shoe Hamper Set" ,price:2479, image:brace13 }
   ];
 
   const handleAddToCart = (item) => {
