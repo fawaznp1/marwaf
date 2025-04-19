@@ -15,6 +15,7 @@ import brace10 from '../images/gifts/g10.webp';
 import brace11 from '../images/gifts/g11.jpg';
 import brace12 from '../images/gifts/g12.webp';
 import brace13 from '../images/gifts/g14.jpeg';
+import LazyImage from '../LazyImage';
 
 
 import './Frames.css';
@@ -55,8 +56,9 @@ function Bracelet() {
       {frameItems.map((item) => (
         <div className="card" key={item.id}>
           <div className="image_container">
-            {/* Dynamically set the image for each card */}
-            <img src={item.image} alt={item.name} className="image" loading="lazy" />
+            
+            {/* <img src={item.image} alt={item.name} className="image" loading="lazy" /> */}
+            <LazyImage src={item.image} alt={item.name} className="image" />
           </div>
           <div className="title">
             <span>{item.name}</span>
@@ -77,12 +79,18 @@ function Bracelet() {
       ))}
       <div>
       <Card className="text-center">
-  <Card.Img 
+  {/* <Card.Img 
     variant="top" 
     src={brace8} 
     alt="Sample Image"
     style={{ objectFit: 'cover', height: '200px', width: '100%' }}
-  />
+  /> */}
+  <LazyImage 
+  src={brace8} 
+  alt="Sample Image"
+  style={{ objectFit: 'cover', height: '200px', width: '100%' }} 
+/>
+
   <Card.Body>
     
     <Card.Text className="text-white">Gift your loved ones moments of joy they'll treasure forever</Card.Text>

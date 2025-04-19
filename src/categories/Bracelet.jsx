@@ -11,6 +11,7 @@ import brace6 from '../images/bracelets/b6.jpg';
 import brace7 from '../images/bracelets/b7.jpg';
 import brace8 from '../images/bracelets/b9.jpg';
 import brace20 from '../images/bracelets/b20.jpg';
+import LazyImage from '../LazyImage';
 
 
 
@@ -45,8 +46,10 @@ function Bracelet() {
       {frameItems.map((item) => (
         <div className="card" key={item.id}>
           <div className="image_container">
-            {/* Dynamically set the image for each card */}
-            <img src={item.image} alt={item.name} className="image" loading="lazy" />
+            
+            {/* <img src={item.image} alt={item.name} className="image" loading="lazy" /> */}
+            <LazyImage src={item.image} alt={item.name} className="image" />
+
           </div>
           <div className="title">
             <span>{item.name}</span>
@@ -67,12 +70,18 @@ function Bracelet() {
       ))}
 
 <Card className="text-center">
-  <Card.Img 
+  {/* <Card.Img 
     variant="top" 
     src={brace20} 
     alt="Sample Image"
     style={{ objectFit: 'cover', height: '200px', width: '100%' }}
-  />
+  /> */}
+  <LazyImage 
+  src={brace20} 
+  alt="Sample Image"
+  style={{ objectFit: 'cover', height: '200px', width: '100%' }} 
+/>
+
   <Card.Body>
     
     <Card.Text className="text-white">Customize any style/stone/color as you like..!</Card.Text>

@@ -11,6 +11,7 @@ import hennaimage4 from '../images/henna/h4.jpg';
 import hennaimage5 from '../images/henna/h5.jpg';
 import hennaimage6 from '../images/henna/h6.jpg';
 import hennaimage7 from '../images/henna/h8.jpg';
+import LazyImage from '../LazyImage';
 
 
 function Henna() {
@@ -41,11 +42,16 @@ function Henna() {
         {hennaItems.map((item) => (
           <Col lg={6} md={12} key={item.id}>
             <Card>
-              <Card.Img
+              {/* <Card.Img
                 variant="top"
                 src={item.image}
                 style={{ width: '100%', height: '300px', objectFit: 'scale-down' }}
-              />
+              /> */}
+              <LazyImage 
+  src={item.image} 
+  alt="Sample Image"
+  style={{ width: '100%', height: '300px', objectFit: 'scale-down' }} 
+/>
               <Card.Body>
                 <Card.Title>#{item.id} {item.text}</Card.Title> {/* Display unique number */}
                 <Card.Text></Card.Text>

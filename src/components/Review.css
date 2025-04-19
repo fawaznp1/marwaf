@@ -1,0 +1,56 @@
+.reviews-section {
+    margin: 50px auto;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .reviews-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-photo {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .circular-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+  }
+  
+  .review-content {
+    text-align: center;
+  }
+  
+  .review-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .review-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .review-stars .star {
+    color: #f39c12;
+    margin: 0 2px;
+  }
+  

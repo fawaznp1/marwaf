@@ -7,6 +7,10 @@ import './Lettera.css'
 import framesimage from '../images/frames/f1.jpg'
 import giftimage from '../images/gifts/g1.jpg'
 import brimage from '../images/bracelets/b1.jpg'
+import LazyImage from '../LazyImage';
+import PhotoSlider from '../components/PhotoSlider';
+import CustomerReviews from '../components/Review';
+import ScrollToTopButton from '../components/TopButton';
 
 
 function Home() {
@@ -44,7 +48,8 @@ function Home() {
             <div className="col-md-6 mb-4 d-flex justify-content-center">
               <Link to="/frames" className="text-decoration-none">
                 <div className="card" style={{ width: '100%' }}>
-                  <img src={framesimage} className="card-img-top" alt="Card image"  />
+                 {/*  <img src={framesimage} className="card-img-top" alt="Card image"  /> */}
+                 <LazyImage src={framesimage} className="card-img-top" alt="frames image"  />
                   <div className="card-body">
                     <h5 className="card-title">Frames</h5>
                     <p className="card-text">Discover a wide range of stylish frames perfect for showcasing your cherished moments. Affordable, high-quality designs to suit every home and occasion.</p>
@@ -59,7 +64,8 @@ function Home() {
             <div className="col-md-6 mb-4 d-flex justify-content-center">
               <Link to="/gifts" className="text-decoration-none">
                 <div className="card" style={{ width: '100%' }}>
-                  <img src={giftimage} className="card-img-top" alt="Card image" />
+                  {/* <img src={giftimage} className="card-img-top" alt="Card image" /> */}
+                  <LazyImage src={giftimage} className="card-img-top" alt="gift image"  />
                   <div className="card-body">
                     <h5 className="card-title">Gift Hamper</h5>
                     <p className="card-text">Discover our thoughtfully curated gift hampers at Marwa Arts, ideal for every occasion. Packed with premium products to delight your loved ones.</p>
@@ -77,7 +83,8 @@ function Home() {
             <div className="col-md-6 mb-4 d-flex justify-content-center">
               <Link to="/bracelet" className="text-decoration-none">
                 <div className="card" style={{ width: '100%' }}>
-                  <img src={brimage} className="card-img-top" alt="Card image" />
+                  {/* <img src={brimage} className="card-img-top" alt="Card image" /> */}
+                  <LazyImage src={brimage} className="card-img-top" alt="bracelet image"  />
                   <div className="card-body">
                     <h5 className="card-title">Bracelets</h5>
                     <p className="card-text">Explore our collection of stylish bracelets at Marwa Arts, designed to add a touch of elegance to any outfit. Perfect for gifting or treating yourself!</p>
@@ -91,7 +98,8 @@ function Home() {
             <div className="col-md-6 mb-4 d-flex justify-content-center">
               <Link to="/henna" className="text-decoration-none">
                 <div className="card" style={{ width: '100%' }}>
-                  <img src={mehandi1} className="card-img-top" alt="Card image" />
+                  {/* <img src={mehandi1} className="card-img-top" alt="Card image" /> */}
+                  <LazyImage src={mehandi1} className="card-img-top" alt="mehandi image"  />
                   <div className="card-body">
                     <h5 className="card-title">Henna Design</h5>
                     <p className="card-text">Explore beautiful, intricate henna designs at Marwa Arts, perfect for every celebration. Handcrafted with precision to add elegance to your special moments.</p>
@@ -104,6 +112,18 @@ function Home() {
             </div>
           </div>
         </section>
+
+        <section>
+          <h2 className='text-center mt-4' >Your Time My Works</h2>
+          <PhotoSlider />
+        </section>
+
+    
+
+        <section>
+          <CustomerReviews />
+        </section>
+
 
     <section>
   <div className="container my-5">

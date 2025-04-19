@@ -16,6 +16,7 @@ import Customizayion from './categories/Customizayion';
 import PrivacyPolicyComponent from './components/Privacyp';
 import Terms from './components/Termsc';
 import Formbuy from './components/Formbuy'
+import ScrollToTopButton from './components/TopButton';
 
 
 
@@ -63,8 +64,10 @@ function App() {
       <Route path='/privacynpolicy' element={<PrivacyPolicyComponent/>} />
       <Route path='/terms' element={<Terms />} />
       <Route path='/form' element={<Formbuy />} />
+      
      </Routes>
      <Footer />
+     <ScrollToTopButton />
     </div>
     </CartProvider>
 

@@ -11,6 +11,7 @@ import brace6 from '../images/frames/f6.jpg';
 import brace7 from '../images/frames/f7.jpg';
 import brace8 from '../images/frames/f8.jpg';
 import brace20 from '../images/frames/f20.webp';
+import LazyImage from '../LazyImage';
 
 import './Frames.css';
 
@@ -32,13 +33,13 @@ function Bracelet() {
 
   const handleAddToCart = (item) => {
     addToCart(item);
-    console.log("Item added:", item); // Logs the item when it's added
+    console.log("Item added:", item); 
   };
 
   const navigate = useNavigate();
 
   const handleBuyNow = () => {
-    navigate("/form"); // Navigate to the EnhancedForm component
+    navigate("/form"); 
   };
 
   const handlecustomize =()=>{
@@ -51,7 +52,9 @@ function Bracelet() {
         <div className="card" key={item.id}>
           <div className="image_container">
             {/* Dynamically set the image for each card */}
-            <img src={item.image} alt={item.name} className="image" loading="lazy" />
+           {/*  <img src={item.image} alt={item.name} className="image"  /> */}
+           <LazyImage src={item.image} alt={item.name} className="image" />
+
           </div>
           <div className="title">
             <span>{item.name}</span>
@@ -72,12 +75,18 @@ function Bracelet() {
       ))}
       <div>
       <Card className="text-center">
-  <Card.Img 
+  {/* <Card.Img 
     variant="top" 
     src={brace20} 
     alt="Sample Image"
     style={{ objectFit: 'cover', height: '200px', width: '100%' }}
-  />
+  /> */}
+  <LazyImage 
+  src={brace20} 
+  alt="Sample Image"
+  style={{ objectFit: 'cover', height: '200px', width: '100%' }} 
+/>
+
   <Card.Body>
     
     <Card.Text className="text-white">You can customize to any size as your convenience.</Card.Text>

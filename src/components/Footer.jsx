@@ -101,13 +101,14 @@ export default function App() {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          
+          <a href="/privacynpolicy"  className="text-white me-2">Privacy Policy</a> 
+          <a href="/terms" className="text-white ms-2">Terms of Service</a>
+          <p className='mt-4'>Developed by fawaz_np <a href="https://fawaznp.vercel.app/" className='text-white' target='_blank'><i className="fa-solid fa-up-right-from-square"></i></a></p> 
           <p>
              &copy; {new Date().getFullYear()} @ marwaarts.in. All Rights Reserved.
           </p>
-          <a href="/privacynpolicy"  className="text-white me-2">Privacy Policy</a> 
-          <a href="/terms" className="text-white ms-2">Terms of Service</a>
-          <p className='mt-4'>Created by fawaz_np <a href="https://fawaznp.vercel.app/" className='text-white' target='_blank'><i className="fa-solid fa-up-right-from-square"></i></a></p> 
-      </div>
+          </div>
     </MDBFooter>
 
     </>

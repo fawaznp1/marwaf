@@ -1,0 +1,31 @@
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .navbar-dark.bg-black {
+    background-color: #121212 !important;
+  }
+  
+  .nav-link.active {
+    color: #fff !important;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+.form-check-label i {
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  .dark-mode-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .dark-mode-toggle i {
+    transition: color 0.3s ease;
+  }
+  
+  
