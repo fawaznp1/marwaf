@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './Header.css';
+import { Link as scrollLink } from 'react-scroll';
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   // Check for saved dark mode setting in local storage on component mount
   useEffect(() => {
@@ -26,43 +28,60 @@ function Header() {
     }
   };
 
+  // Function to close the navbar on mobile after clicking a link
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 768) {
+      setNavbarOpen(false); // Close the navbar on mobile
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
       <div className="container-fluid">
         <a className="navbar-brand ms-5" href="/">marwaarts.in</a>
-        
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          onClick={() => setNavbarOpen(!navbarOpen)} 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNavDropdown" 
+          aria-controls="navbarNavDropdown" 
+          aria-expanded={navbarOpen} 
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div className={`collapse navbar-collapse ${navbarOpen ? 'show' : ''}`} id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <Link className="nav-link active" aria-current="page" to="/" onClick={handleLinkClick}>Home</Link>
             </li>
             
             <li className="nav-item dropdown">
-              <a className="nav-link active dropdown-toggle me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categories
-              </a>
+            <a className="nav-link dropdown-toggle me-2" href="#" role="button" data-bs-toggle="dropdown">
+  Categories <i className="fa-solid fa-chevron-down ms-1"></i>
+</a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="/frames">Frames</a></li>
-                <li><a className="dropdown-item" href="/henna">Henna Design</a></li>
-                <li><a className="dropdown-item" href="/gifts">Gift Hamper</a></li>
-                <li><a className="dropdown-item" href="/bracelet">Bracelets</a></li>
+                <li><Link className="dropdown-item" to="/frames" onClick={handleLinkClick}>Frames</Link></li>
+                <li><Link className="dropdown-item" to="/henna" onClick={handleLinkClick}>Henna Design</Link></li>
+                <li><Link className="dropdown-item" to="/gifts" onClick={handleLinkClick}>Gift Hamper</Link></li>
+                <li><Link className="dropdown-item" to="/bracelet" onClick={handleLinkClick}>Bracelets</Link></li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/#contact">Contact Us</a>
-            </li>
+             {/*  <Link className="nav-link active" to="#contact" onClick={handleLinkClick}>Contact Us</Link> */}
+              <Link to="#contact" smooth={true} duration={500} className="nav-link">
+              Contact </Link>
+              </li>
             <li className="nav-item">
-              <a className="nav-link me-2 active" href="/custom">Customization</a>
+              <Link className="nav-link me-2 active" to="/custom" onClick={handleLinkClick}>Customization</Link>
             </li>
           </ul>
-          
-          {/* Dark Mode Toggle with Sun and Moon icons */}
-          <div className="dark-mode-toggle" onClick={toggleDarkMode} style={{ cursor: 'pointer', fontSize: '24px' }}>
-            {/* Show Sun when dark mode is off, Moon when dark mode is on */}
+
+          {/* Dark Mode Toggle */}
+          <div className="dark-mode-toggle p-2" onClick={toggleDarkMode} style={{ cursor: 'pointer', fontSize: '24px' }}>
             {darkMode ? (
               <i className="fa fa-sun" style={{ color: '#FFD700' }}></i>
             ) : (

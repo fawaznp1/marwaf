@@ -1,0 +1,21 @@
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+  }
+  
+  .card-title {
+    font-weight: 600;
+  }
+  
+  .card-text {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  

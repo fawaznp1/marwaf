@@ -32,9 +32,9 @@ export default function App() {
         `}
       </style>
     
-    <MDBFooter className='text-center mt-3' color='white' bgColor='dark'>
+    <MDBFooter  className='text-center mt-3' color='white' bgColor='dark'>
       <MDBContainer className='p-4'>
-        <section className='mb-4'>
+        <section className='mb-4'  >
           <MDBRow>
             <MDBCol xs='auto' className='d-flex justify-content-center'>
              
@@ -61,7 +61,7 @@ export default function App() {
             </MDBCol>
           </MDBRow>
         </section>
-              <div id='contact'></div>
+              
         <section className=''>
           <form action=''>
             <MDBRow className='d-flex justify-content-center'>

@@ -74,7 +74,7 @@ const QueueSlider = () => {
     if (!containerRef.current) return;
 
     // If at beginning, jump to last image instantly
-    if (containerRef.current.scrollLeft <= 0) {
+    if (containerRef.current.scrollLeft <= 200) {
       containerRef.current.scrollTo({ left: (images.length - 1) * itemWidth, behavior: "auto" });
       setTimeout(() => {
         containerRef.current.scrollBy({ left: -itemWidth, behavior: "smooth" });

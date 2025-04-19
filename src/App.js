@@ -17,6 +17,7 @@ import PrivacyPolicyComponent from './components/Privacyp';
 import Terms from './components/Termsc';
 import Formbuy from './components/Formbuy'
 import ScrollToTopButton from './components/TopButton';
+import Refreshpage from './components/Refreshpage';
 
 
 
@@ -51,7 +52,7 @@ function App() {
 
     <div className="App">
       
-
+      <Refreshpage />
       <Header />
      <Routes>
       <Route path='/' element={<Home />} />
