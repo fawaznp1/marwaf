@@ -1,7 +1,5 @@
-/* Slick Carousel Styles */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-/* in App.css or component CSS */
 .hover-shadow:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
   }
