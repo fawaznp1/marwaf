@@ -28,7 +28,14 @@ export default function App() {
             outline: none; /* Removes the default browser focus outline */
             box-shadow: none; /* Prevents extra shadow or glow effects */
             transform: none; /* Disables scaling or zoom effects */
-          }
+          },
+           @media (max-width: 576px) {
+    .social-btn {
+      width: 40px;
+      height: 35px;
+      padding: 8px;
+    }
+  }
         `}
       </style>
     

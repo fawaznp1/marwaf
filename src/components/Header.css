@@ -1,44 +1,34 @@
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-  }
-.collapse {
-    transition: all 0.3s ease-in-out;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  
-  .navbar-dark.bg-black {
-    background-color: #121212 !important;
-  }
-  
-  .nav-link.active {
-    color: #fff !important;
-  }
-  
-  .navbar-toggler-icon {
-    background-color: #fff;
-  }
-.form-check-label i {
-    font-size: 24px;
-    transition: color 0.3s ease;
-  }
-  .dark-mode-toggle {
-    cursor: pointer;
-    font-size: 24px;
-    transition: color 0.3s ease;
-  }
-  
-  .dark-mode-toggle i {
-    transition: color 0.3s ease;
-  }
-  
-  
+body.dark-mode { 
+  background-color: #121212;
+  color: white;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-  /* Enhancing navbar links */
+.navbar-dark.bg-black {
+  background-color: #121212 !important;
+}
+
+.nav-link.active {
+  color: #fff !important;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+/* Dark mode toggle and form label icons */
+.form-check-label i,
+.dark-mode-toggle,
+.dark-mode-toggle i {
+  font-size: 24px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Navbar links */
 .navbar-nav .nav-link {
   position: relative;
   color: #fff !important;
@@ -54,19 +44,19 @@ body.dark-mode {
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: #ffc107; /* underline color */
+  background-color: #ffc107;
   transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ffc107 !important; /* text color on hover */
+  color: #ffc107 !important;
 }
 
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
 
-/* Enhance dropdown toggle link */
+/* Navbar dropdown toggle */
 .navbar .dropdown-toggle {
   position: relative;
   font-weight: 500;
@@ -78,58 +68,37 @@ body.dark-mode {
   color: #ffc107 !important;
 }
 
-.navbar .dropdown-toggle::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #ffc107;
-  transition: width 0.3s ease;
-}
-
-.navbar .dropdown-toggle:hover::after {
-  width: 100%;
-}
-
-/* Enhance dropdown menu items */
-.dropdown-menu .dropdown-item {
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.dropdown-menu .dropdown-item:hover {
-  background-color: #ffc107;
-  color: #000;
-  font-weight: 500;
-}
-.dropdown-menu {
-  animation: fadeIn 0.4s ease;
-  
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* Remove default dropdown arrow */
 .navbar .dropdown-toggle::after {
   display: none !important;
 }
+
+/* Dropdown menu */
 .dropdown-menu {
-  background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: none;
   padding: 0.5rem;
+  animation: fadeIn 0.4s ease;
   transition: all 0.3s ease;
 }
 
-.dropdown-item {
+/* Dropdown items */
+.dropdown-menu .dropdown-item {
   padding: 0.75rem 1.25rem;
   border-radius: 6px;
   transition: background-color 0.2s ease;
 }
 
-.dropdown-item:hover {
+.dropdown-menu .dropdown-item:hover {
   background-color: #f1f1f1;
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Dropdown fadeIn animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

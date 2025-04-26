@@ -1,8 +1,10 @@
 .reviews-section {
-    margin: 50px auto;
+  margin: 20px auto;
+  max-width: 100%;
     text-align: center;
-    max-width: 900px;
+    /* max-width: 900px; */
     margin-bottom: 2.5rem;
+    padding: 0 15px;
   }
   
   .reviews-title {
@@ -12,12 +14,14 @@
   
   .review-card {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 12px;
    /*  background-color: #f8f8f8; */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/*     border-radius: 10px;
+ */    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ box-sizing: border-box;
   }
   
   .review-photo {
@@ -27,7 +31,7 @@
   }
   
   .circular-photo {
-    width: 100px;
+    max-width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
@@ -74,3 +78,8 @@
     --heading-color: #f1f1f1;
   }
   
+
+  @media (max-width: 768px) {
+  .reviews-title {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }}

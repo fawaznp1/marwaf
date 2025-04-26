@@ -6,9 +6,7 @@
     gap: 10px;
     padding: 10px;
     max-width: 95%;
-    margin-top: 2rem;
-    margin: auto;
-    margin-top: 2rem;
+    margin: 2rem auto;
     scrollbar-width: none;         /* Firefox */
     -ms-overflow-style: none;      /* IE and Edge */
   }
@@ -19,7 +17,7 @@
   
   .scroll-item {
     flex: 0 0 400px;              /* match image width for exact scroll */
-    width: 400px;
+    max-width: 400px;
     height: 250px;
     border-radius: 20px;
     object-fit: cover;
@@ -28,7 +26,7 @@
   @media (max-width: 768px) {
     .scroll-item {
       flex: 0 0 300px;
-      width: 300px;
+      max-width: 300px;
       height: 200px;
     }
   }
@@ -36,7 +34,7 @@
   @media (max-width: 480px) {
     .scroll-item {
       flex: 0 0 250px;
-      width: 250px;
+      max-width: 250px;
       height: 160px;
     }
   }

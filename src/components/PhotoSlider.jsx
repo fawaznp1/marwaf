@@ -99,7 +99,7 @@ const QueueSlider = () => {
           <img key={index} src={src} className="scroll-item" alt={`img-${index}`} />
         ))}
       </div>
-
+{/* 
       <div className="arrow-row">
   <button onClick={scrollPrev}>
   <CircleArrowLeft size={40}/>
@@ -108,7 +108,7 @@ const QueueSlider = () => {
     <CircleArrowRight size={40}/>
     
   </button>
-</div>
+</div> */}
 
     </>
   );

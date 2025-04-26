@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { FaStar } from 'react-icons/fa';
 
-import './Review.css'; // Style the carousel
+import './Review.css'; 
 
 const CustomerReviews = () => {
   const reviews = [
@@ -19,7 +19,7 @@ const CustomerReviews = () => {
   ];
 
   const settings = {
-    dots: true,
+    dots: true, 
     infinite: true,
     speed: 500,
     autoplay: true,

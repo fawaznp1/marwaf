@@ -52,10 +52,10 @@ export default function Categories() {
     fontWeight: "bold",
     fontSize: "2.5rem",
     letterSpacing: "1px",
-    color: "#333",
+    
     textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
   }}
->
+> 
   Categories
 </h1>
 

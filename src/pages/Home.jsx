@@ -23,12 +23,12 @@ function Home() {
             <img
               src={marwaimage1}
               alt="marwaimage"
-              className="img-fluid"
-              style={{borderRadius:'15px'}}
+              className="homeimage img-fluid  "
+              
             />
           </div>
           <div className="col-md-6 d-flex align-items-center mt-2">
-            <div>
+            <div> 
               <div className='letteranim' >
 {/*               <h2>Welcome to </h2>
  */}                <h1 class="cssanimation open sequence">marwaarts.in</h1>

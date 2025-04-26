@@ -1,3 +1,11 @@
+.homeimage{
+  width: 100%;  /* Makes the image responsive */
+  /* height: auto;  *//* Maintains aspect ratio */
+  border-radius: 15px; /* Adds rounded corners */
+  
+}
+
+
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -35,7 +43,6 @@
 
   /* pargrapgh on first page */
 
-  /* Apply new font-family and general text styling */
 .text-style {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;  /* Applying the custom font */

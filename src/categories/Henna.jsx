@@ -54,7 +54,7 @@ function Henna() {
           <Col lg={6} md={12} key={item.id}>
             <Card 
               className="glass-card shadow-sm h-100 border-0 hover-shadow transition"
-            >
+            style={{borderRadius:"10px"}}>
               <img
   src={item.image}
   alt={item.text}
