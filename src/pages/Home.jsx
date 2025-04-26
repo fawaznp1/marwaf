@@ -22,7 +22,7 @@ function Home() {
           <div className="col-md-6 d-flex align-items-center justify-content-center mt-3">
             <img
               src={marwaimage1}
-              alt="homeimage"
+              alt="marwaimage"
               className="img-fluid"
               style={{borderRadius:'15px'}}
             />
@@ -33,15 +33,21 @@ function Home() {
 {/*               <h2>Welcome to </h2>
  */}                <h1 class="cssanimation open sequence">marwaarts.in</h1>
               </div>
-              <p className='mt-3' style={{fontSize:'1.6rem'}}>
-               Your one-stop destination for <span style={{color:'#d65c5c'}}>gifts</span> ,   <span style={{color:'#6443db'}}>hampers</span> , <span style={{color:'#09c338'}}>frames</span> and <span style={{color:'#fc03d3'}}>Calligraphy</span>   offering affordable prices and the best quality to make every occasion special.              
-               </p>
+              <p className='mt-3 text-style'>
+  Your one-stop destination for 
+  <span className='highlight-gifts'> gifts</span> ,   
+  <span className='highlight-hampers'> hampers</span> , 
+  <span className='highlight-frames'> frames</span> and 
+  <span className='highlight-calligraphy'> Calligraphy </span>   
+   offering affordable prices and the best quality to make every occasion special.
+</p>
+
 
 
 
             </div>
           </div>
-        </div>
+        </div> 
 
       
         <section>
@@ -49,7 +55,10 @@ function Home() {
         </section>
 
         <section>
-          <h2 className='text-center mt-4' >Your Time My Works</h2>
+        <h2 className="showcase-heading text-center mt-4">
+  Inspired by You, Created by Me
+</h2>
+
           <PhotoSlider />
         </section>
 

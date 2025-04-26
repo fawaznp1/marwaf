@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa'; // You can use any arrow icon you prefer
+import { FaArrowUp } from 'react-icons/fa'; 
 
 function ScrollToTopButton() {
   const [visible, setVisible] = useState(false);
 
   // Show button when scrolled down
   const checkScroll = () => {
-    if (window.scrollY > 300) { // Change this value as needed
+    if (window.scrollY > 300) { 
       setVisible(true);
     } else {
       setVisible(false);
     }
   };
 
-  // Scroll to the top of the page
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Smooth scroll
+      behavior: 'smooth', 
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', checkScroll); // Add scroll event listener
-    return () => window.removeEventListener('scroll', checkScroll); // Clean up on unmount
+    window.addEventListener('scroll', checkScroll); 
+    return () => window.removeEventListener('scroll', checkScroll); 
   }, []);
 
   return (
@@ -32,7 +31,7 @@ function ScrollToTopButton() {
         className="scroll-to-top-btn"
         onClick={scrollToTop}
         style={styles.scrollButton}
-        title="Go to top"  // Tooltip text
+        title="Go to top"  
       >
         <FaArrowUp style={styles.arrowIcon} />
       </div>

@@ -94,7 +94,7 @@ const QueueSlider = () => {
 
   return (
     <>
-      <div className="scroll-container" ref={containerRef}>
+      <div className="scroll-container" id="gallery" ref={containerRef}>
         {images.map((src, index) => (
           <img key={index} src={src} className="scroll-item" alt={`img-${index}`} />
         ))}

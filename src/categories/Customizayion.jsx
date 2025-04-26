@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import './custom.css'
+import './custom.css';
 
 function CustomizationComponent() {
   const [formData, setFormData] = useState({
@@ -80,7 +80,8 @@ function CustomizationComponent() {
   };
 
   return (
-    <Container className="mt-5">
+    <>
+    <Container className="custom mt-5">
       <h2 className="text-center mb-4">Your Customization, Your Style!</h2>
       <p className="text-center mb-4">
         We offer personalized designs and services, tailored just for you. Whether you’re looking for a <strong>customized product</strong> , or a <strong>special request</strong> , we can bring your vision to life!
@@ -175,6 +176,10 @@ function CustomizationComponent() {
 
       <ToastContainer />
     </Container>
+
+</>
+
+
   );
 }
 

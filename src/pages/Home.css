@@ -14,4 +14,50 @@
 
   }
  
+  .showcase-heading {
+    font-family: 'Playfair Display', 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 0.8px;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+  }
   
+  /* Theme color variables */
+  .light-theme {
+    --heading-color: #222; /* Dark text for light theme */
+  }
+  
+  .dark-theme {
+    --heading-color: #f1f1f1; /* Light text for dark theme */
+  }
+  
+
+  /* pargrapgh on first page */
+
+  /* Apply new font-family and general text styling */
+.text-style {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;  /* Applying the custom font */
+  line-height: 1.5;
+}
+
+.highlight-gifts {
+  color: #d65c5c;
+  font-weight: bold;
+}
+
+.highlight-hampers {
+  color: #6443db;
+  font-weight: bold;
+}
+
+.highlight-frames {
+  color: #09c338;
+  font-weight: bold;
+}
+
+.highlight-calligraphy {
+  color: #fc03d3;
+  font-weight: bold;
+}

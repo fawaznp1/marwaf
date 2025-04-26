@@ -36,7 +36,7 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-black sticky-top ">
       <div className="container-fluid">
         <a className="navbar-brand ms-5" href="/">marwaarts.in</a>
 
@@ -65,15 +65,18 @@ function Header() {
 </a>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" to="/frames" onClick={handleLinkClick}>Frames</Link></li>
-                <li><Link className="dropdown-item" to="/henna" onClick={handleLinkClick}>Henna Design</Link></li>
+                
                 <li><Link className="dropdown-item" to="/gifts" onClick={handleLinkClick}>Gift Hamper</Link></li>
                 <li><Link className="dropdown-item" to="/bracelet" onClick={handleLinkClick}>Bracelets</Link></li>
+                <li><Link className="dropdown-item" to="/henna" onClick={handleLinkClick}>Henna Design</Link></li>
               </ul>
             </li>
+           {/*  <li className="nav-item">
+              <Link className="nav-link me-2 active" to="#gallery" onClick={handleLinkClick}>Gallery</Link>
+            </li> */}
             <li className="nav-item">
-             {/*  <Link className="nav-link active" to="#contact" onClick={handleLinkClick}>Contact Us</Link> */}
-              <Link to="#contact" smooth={true} duration={500} className="nav-link">
-              Contact </Link>
+               <Link className="nav-link active" to="/contact" onClick={handleLinkClick}>Contact Us</Link> 
+             
               </li>
             <li className="nav-item">
               <Link className="nav-link me-2 active" to="/custom" onClick={handleLinkClick}>Customization</Link>
@@ -81,7 +84,7 @@ function Header() {
           </ul>
 
           {/* Dark Mode Toggle */}
-          <div className="dark-mode-toggle p-2" onClick={toggleDarkMode} style={{ cursor: 'pointer', fontSize: '24px' }}>
+          <div className="dark-mode-toggle p-2 me-5" onClick={toggleDarkMode} style={{ cursor: 'pointer', fontSize: '24px' }}>
             {darkMode ? (
               <i className="fa fa-sun" style={{ color: '#FFD700' }}></i>
             ) : (

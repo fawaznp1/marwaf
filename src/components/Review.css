@@ -54,3 +54,23 @@
     margin: 0 2px;
   }
   
+
+  .reviews-title {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 800;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  
+  /* Theme color variables (already from before) */
+  .light-theme {
+    --heading-color: #222;
+  }
+  
+  .dark-theme {
+    --heading-color: #f1f1f1;
+  }
+  

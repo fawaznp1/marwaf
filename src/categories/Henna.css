@@ -1,0 +1,125 @@
+ .glass-card {
+    background: rgba(255, 255, 255, 0.15); /* slightly more opaque */
+  backdrop-filter: blur(15px); /* stronger blur */
+  -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-modal .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+   
+  .glass-card {
+    background: rgba(255, 255, 255, 0.07); /* Very subtle transparency */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Add a subtle gradient overlay */
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 0;
+  }
+  
+  /* Ensure card content stays above the gradient */
+  .glass-card > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+
+
+  .enhanced-section {
+    font-family: 'Roboto', sans-serif;
+    padding: 50px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .subheading {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+  }
+  
+  .description {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Theme support */
+  body.light-theme .enhanced-section {
+    background-color: #ffffff;
+  }
+  
+  body.dark-theme .enhanced-section {
+    background-color: #121212;
+  }
+  
+  /* Text color adjustments */
+  body.light-theme .heading,
+  body.light-theme .subheading,
+  body.light-theme .description {
+    color: #222; /* Dark text for light background */
+  }
+  
+  body.dark-theme .heading,
+  body.dark-theme .subheading,
+  body.dark-theme .description {
+    color: #eee; /* Light text for dark background */
+  }
+  
+  /* Optional Hover (light and subtle) */
+  .enhanced-section:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+  

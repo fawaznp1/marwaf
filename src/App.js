@@ -22,27 +22,16 @@ import Refreshpage from './components/Refreshpage';
 
 
 
-
 function App() {
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if the page has been loaded before
-    const hasLoadedBefore = localStorage.getItem("pageLoaded");
-
-    if (!hasLoadedBefore) {
-      // Simulate loading time (e.g., for assets or data fetching)
-      const timer = setTimeout(() => {
-        setLoading(false);
-        sessionStorage.setItem("pageLoaded", "true"); // Mark the page as loaded
-      }, 2500); // Adjust the delay as per your requirement
-
-      return () => clearTimeout(timer); // Clean up the timer
-    } else {
-      setLoading(false); // Skip loading if already loaded before
-    }
+    const timer = setTimeout(() => setLoading(false), 3000);
+  
+    return () => clearTimeout(timer);
   }, []);
+  
 
   if (loading) {
     return <Loader />; // Show loader when loading
@@ -65,7 +54,6 @@ function App() {
       <Route path='/privacynpolicy' element={<PrivacyPolicyComponent/>} />
       <Route path='/terms' element={<Terms />} />
       <Route path='/form' element={<Formbuy />} />
-      
      </Routes>
      <Footer />
      <ScrollToTopButton />

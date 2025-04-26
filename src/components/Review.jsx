@@ -32,7 +32,10 @@ const CustomerReviews = () => {
 
   return (
     <div className="reviews-section">
-      <h2 className="reviews-title">Customer Reviews</h2>
+     <h2 className="reviews-title text-center mt-5">
+  Customer Reviews
+</h2>
+
       <Slider {...settings}>
         {reviews.map((review) => (
           <div key={review.id} className="review-card">

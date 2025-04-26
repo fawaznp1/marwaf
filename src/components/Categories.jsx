@@ -45,7 +45,20 @@ const cardData = [
 export default function Categories() {
   return (
     <section className="mt-5 container">
-      <h1 className="text-center mb-5">Categories</h1>
+      <h1 
+  className="text-center mb-5" 
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: "bold",
+    fontSize: "2.5rem",
+    letterSpacing: "1px",
+    color: "#333",
+    textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+  }}
+>
+  Categories
+</h1>
+
       <div className="row">
         {cardData.map((item, index) => (
           <div key={index} className="col-md-6 mb-4 d-flex justify-content-center">

@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 2rem;
-    margin-top:4rem;
-  }
+    gap: 4rem;
+/*     margin-top:3px;
+ */  }
 
  .frames .card {
     --bg-card: #27272a;
@@ -72,6 +72,43 @@
   .cart-button .cart-icon {
     width: 1rem;
   } 
+
+  .custom-modal .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+h3{
+  margin-top: 1rem;
+}
+
+
+/* General styles for the h3 title */
+.explore-frames-title {
+  font-size: 2rem;  /* Larger font for emphasis */
+  font-family: 'Poppins', sans-serif; /* Using Poppins font */
+  font-weight: 600;  /* Bold text */
+  text-align: center; /* Center-aligned */
+  margin-top: 1rem;  /* Spacing above */
+  color: #333;  /* Default color for light theme */
+  transition: color 0.3s ease; /* Smooth transition for color change in dark theme */
+}
+
+/* Dark theme adjustments */
+body.dark-theme .explore-frames-title {
+  color: #fff; /* White text in dark theme */
+}
+
+/* Optional: Add hover effect for more interactivity */
+.explore-frames-title:hover {
+  color: #6443db; /* Changes color when hovered */
+  cursor: pointer; /* Shows pointer cursor */
+}
 
 
 

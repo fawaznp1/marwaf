@@ -145,13 +145,14 @@ const EnhancedForm = () => {
   };
 
   return (
+    <>
     <div className="container mt-4">
       <ToastContainer />
       <h2 className="text-center mb-4">Shipping Details</h2>
 
       <div className="d-flex flex-column align-items-center">
         <img src={Qrcode} style={{ width: "150px" }} alt="UPI QR code" />
-        <h6>Hold image to download</h6>
+        <h6 className="mt-1">Hold image to download</h6>
         <h6>UPI ID: {upiId}</h6>
         <button
           onClick={handleCopy}
@@ -256,6 +257,8 @@ const EnhancedForm = () => {
         </button>
       </form>
     </div>
+    
+    </>
   );
 };
 

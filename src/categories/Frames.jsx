@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Modal } from 'react-bootstrap';
 import { useCart } from "../pages/Cartcontext";
 import { useNavigate } from 'react-router-dom';
 import LazyImage from '../LazyImage';
- import './Frames.css';
+import './Frames.css';
  
 import brace1 from '../images/frames/f11.jpg';
 import brace2 from '../images/frames/frames1.PNG';
@@ -20,9 +20,14 @@ function Bracelet() {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
+  // Modal state
+  const [showModal, setShowModal] = useState(false);
+  const [modalImage, setModalImage] = useState('');
+  const [modalCaption, setModalCaption] = useState('');
 
   const frameItems = [
-    { id: 1, name: "Elegant Oak Frame", price: 849, image: brace1 },
+    { id: 1, name: "Elegant hok Frame", price: 849, image: brace1 },
     { id: 2, name: "Classic Walnut Frame", price: 179, image: brace2 },
     { id: 3, name: "Modern Black Frame", price: 899, image: brace3 },
     { id: 4, name: "Rustic Pine Frame", price: 199, image: brace4 },
@@ -58,6 +63,18 @@ function Bracelet() {
 
   const prevItem = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + frameItems.length) % frameItems.length);
+  };
+
+  // Function to handle opening the modal
+  const handleOpenModal = (image, name) => {
+    setModalImage(image);
+    setModalCaption(name);
+    setShowModal(true);
+  };
+
+  // Function to handle closing the modal
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   // Calculate positions for the circular carousel
@@ -105,10 +122,42 @@ function Bracelet() {
   };
 
   const cardDimensions = getCardDimensions();
+  
+  // Modal caption styling based on theme
+  const modalTitleStyle = {
+    color: '#6366F1', // Theme color matching the gradient in the buttons
+    fontWeight: '600',
+    fontSize: '1.25rem'
+  };
+  
+  // Modal custom styles
+  const modalHeaderStyle = {
+    borderBottom: '1px solid rgba(99, 102, 241, 0.2)', // Light border with theme color
+    padding: '1rem 1.5rem'
+  };
+  
+  const modalBodyStyle = {
+    padding: '1.5rem'
+  };
+  
+  const modalFooterStyle = {
+    borderTop: '1px solid rgba(99, 102, 241, 0.2)', // Light border with theme color
+    padding: '1rem 1.5rem'
+  };
+  
+  const closeButtonStyle = {
+    background: 'linear-gradient(135deg, #6366F1, #4F46E5)',
+    border: 'none',
+    borderRadius: '6px',
+    padding: '8px 16px',
+    transition: 'all 0.2s ease',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+  };
 
   return (
     <>
-    <h3 className='text-center'>Explore Different Frames</h3>
+    <h3 className="text-center explore-frames-title">Explore Different Frames</h3>
+
     <div className="frames card-grid mb-5" style={containerStyle}>
       <div className="card-container" style={carouselContainerStyle}>
         {frameItems.map((item, index) => {
@@ -149,6 +198,10 @@ function Bracelet() {
                   overflow: 'hidden',
                   borderRadius: '10px 10px 0 0',
                 }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleOpenModal(item.image, item.name);
+                }}
               >
                 <LazyImage 
                   src={item.image} 
@@ -177,11 +230,7 @@ function Bracelet() {
                   style={{
                     fontWeight: '600',
                     fontSize: windowWidth < 768 ? '0.9rem' : '1rem',
-                    /* color: '#fff',
-                    textShadow: '0 2px 4px rgba(0,0,0,0.2)',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis', */
+                   
                   }}
                 >
                   <span>{item.name}</span>
@@ -242,65 +291,96 @@ function Bracelet() {
           );
         })}
       </div>
+    </div>
 
-      {/* Navigation arrows positioned at the bottom */}
+    {/* Navigation arrows and pagination dots moved below the card section */}
+    <div 
+      className="carousel-navigation"
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '15px',
+        marginTop: '20px', // Add space between cards and navigation
+        marginBottom: '40px',
+        width: '100%',
+        zIndex: 50,
+      }}
+    >
+      <button 
+        onClick={prevItem} 
+        style={{
+          ...navButtonStyle,
+          background: 'linear-gradient(135deg, #6366F1, #4F46E5)',
+        }}
+        aria-label="Previous frame"
+      >
+        <i className="fa-solid fa-chevron-left"></i>
+      </button>
+      
       <div 
-        className="carousel-navigation"
+        className="pagination-dots"
         style={{
           display: 'flex',
-          justifyContent: 'center',
-          gap: '15px',
-         
-          position: 'absolute',
-          
-          left: '0',
-          right: '0',
-          zIndex: 50,
+          gap: '8px',
+          alignItems: 'center',
         }}
       >
-        <button 
-          onClick={prevItem} 
-          style={navButtonStyle}
-          aria-label="Previous frame"
-        >
-          <i className="fa-solid fa-chevron-left"></i>
-        </button>
-        
-        <div 
-          className="pagination-dots"
-          style={{
-            display: 'flex',
-            gap: '8px',
-            alignItems: 'center',
-          }}
-        >
-          {frameItems.map((_, index) => (
-            <span
-              key={index}
-              style={{
-                width: currentIndex === index ? '12px' : '8px',
-                height: currentIndex === index ? '12px' : '8px',
-                borderRadius: '50%',
-                background: currentIndex === index ? '#6366F1' : '#CBD5E1',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer',
-              }}
-              onClick={() => setCurrentIndex(index)}
-            />
-          ))}
-        </div>
-        
-        <button 
-          onClick={nextItem} 
-          style={navButtonStyle}
-          aria-label="Next frame"
-        >
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
+        {frameItems.map((_, index) => (
+          <span
+            key={index}
+            style={{
+              width: currentIndex === index ? '12px' : '8px',
+              height: currentIndex === index ? '12px' : '8px',
+              borderRadius: '50%',
+              background: currentIndex === index ? '#6366F1' : '#CBD5E1',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+            }}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
       </div>
-
-    
+      
+      <button 
+        onClick={nextItem} 
+        style={{
+          ...navButtonStyle,
+          background: 'linear-gradient(135deg, #6366F1, #4F46E5)',
+        }}
+        aria-label="Next frame"
+      >
+        <i className="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
+
+    {/* Image Modal with Custom Styles */}
+    <Modal
+  show={showModal}
+  onHide={handleCloseModal}
+  size="lg"
+  centered
+  dialogClassName="custom-modal"
+>
+  <Modal.Header closeButton className="border-0" style={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
+    <Modal.Title style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.5rem', textShadow: '1px 1px 5px rgba(0,0,0,0.7)' }}>
+      {modalCaption}
+    </Modal.Title>
+  </Modal.Header>
+  <Modal.Body className="text-center p-0" style={{ background: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(15px)' }}>
+    <img
+      src={modalImage}
+      alt={modalCaption}
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        borderRadius: '0 0 8px 8px'
+      }}
+    />
+  </Modal.Body>
+</Modal>
+
     </>
   );
 }
@@ -308,10 +388,9 @@ function Bracelet() {
 const containerStyle = {
   position: 'relative',
   width: '100%',
-  minHeight: '800px',
-  perspective: '1600px',
+  minHeight: '550px', // Reduced height since navigation is now below
+  perspective: '2400px',
   overflowX: 'hidden',
- 
 };
 
 const carouselContainerStyle = {
@@ -325,7 +404,6 @@ const carouselContainerStyle = {
 };
 
 const navButtonStyle = {
-  background: 'rgba(255, 255, 255, 0.2)',
   color: '#fff',
   border: 'none',
   borderRadius: '50%',
