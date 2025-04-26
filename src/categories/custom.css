@@ -7,30 +7,33 @@
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* 
 h2, p, .form-control, .btn-primary, .custom-dropdown {
-  color: #333; /* A dark grey color */
-}
+  color: #333; 
+} */
 
 
-h2 {
+.custom h2 {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: bold;
 }
 
-p {
+.custom p {
   color: white;
   font-family: 'Lora', serif;
   font-size: 1.2rem;
 }
 
-.form-control {
+.custom .form-control {
+
   border-radius: 8px;
   background-color: #f4f4f9;
   border: 1px solid #ddd;
   padding: 12px;
   transition: all 0.3s ease;
 }
+
 
 .form-control:focus {
   border-color: #2575fc;
@@ -65,4 +68,8 @@ p {
   background-color: #f4f4f9;
   padding: 12px;
   border-radius: 8px;
+}
+
+.custom .form-label{
+  color: white;
 }
