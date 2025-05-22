@@ -10,7 +10,7 @@ import brace5 from '../images/bracelets/b5.webp';
 import brace6 from '../images/bracelets/b6.webp';
 import brace7 from '../images/bracelets/b7.webp';
 import brace8 from '../images/bracelets/b9.webp';
-import LazyImage from '../LazyImage';
+import LazyImage from '../LazyImage';  
 import './Frames.css';
 
 function Bracelet() {
