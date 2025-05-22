@@ -40,7 +40,7 @@ const CustomerReviews = () => {
         {reviews.map((review) => (
           <div key={review.id} className="review-card">
             <div className="review-photo">
-              <img src={review.photo} alt={review.name} className="circular-photo" />
+              <img src={review.photo} alt={review.name} className="circular-photo" loading='lazy' />
             </div>
             <div className="review-content">
               <h3 className="review-name">{review.name}</h3>

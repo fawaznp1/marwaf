@@ -3,7 +3,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Qrcode from "../images/upiimage.jpg";
+import Qrcode from "../images/upiimage.webp";
 
 const EnhancedForm = () => {
   const [formData, setFormData] = useState({

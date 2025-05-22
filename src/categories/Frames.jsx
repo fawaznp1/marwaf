@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import LazyImage from '../LazyImage';
 import './Frames.css';
  
-import brace1 from '../images/frames/f11.jpg';
-import brace2 from '../images/frames/frames1.PNG';
-import brace3 from '../images/frames/f3.jpg';
-import brace4 from '../images/frames/f4.jpg';
-import brace5 from '../images/frames/f5.jpg';
-import brace6 from '../images/frames/f6.jpg';
-import brace7 from '../images/frames/f7.jpg';
-import brace8 from '../images/frames/f8.jpg';
+import brace1 from '../images/frames/f11.webp';
+import brace2 from '../images/frames/frames1.webp';
+import brace3 from '../images/frames/f3.webp';
+import brace4 from '../images/frames/f4.webp';
+import brace5 from '../images/frames/f5.webp';
+import brace6 from '../images/frames/f6.webp';
+import brace7 from '../images/frames/f7.webp';
+import brace8 from '../images/frames/f8.webp';
 import brace20 from '../images/frames/f20.webp';
 
 function Bracelet() {

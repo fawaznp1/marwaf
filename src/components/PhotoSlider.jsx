@@ -1,44 +1,43 @@
 import React, { useRef, useEffect } from "react";
 import './PhotoSlider.css';
-import {  CircleArrowLeft ,CircleArrowRight } from 'lucide-react';
-import photo1 from '../images/frames/f1.jpg';
-import photo2 from '../images/frames/f2.jpg';
-import photo3 from '../images/frames/f3.jpg';
-import photo4 from '../images/frames/f4.jpg';
-import photo5 from '../images/frames/f5.jpg';
-import photo6 from '../images/frames/f6.jpg';
-import photo7 from '../images/frames/f7.jpg';
-import photo8 from '../images/frames/f8.jpg';
-import photo9 from '../images/frames/f9.jpg';
-import photo10 from '../images/frames/f10.jpg';
-import photo11 from '../images/frames/f11.jpg';
-import photo12 from '../images/frames/f12.jpg';
-import photo14 from '../images/bracelets/b1.jpg';
-import photo15 from '../images/bracelets/b2.jpg';
-import photo16 from '../images/bracelets/b3.jpg';
-import photo17 from '../images/bracelets/b4.jpg';
-import photo18 from '../images/bracelets/b5.jpg';
-import photo19 from '../images/bracelets/b6.jpg';
-import photo20 from '../images/bracelets/b7.jpg';
-import photo22 from '../images/bracelets/b9.jpg';
-import photo23 from '../images/bracelets/b10.jpg';
-import photo24 from '../images/gifts/g1.jpg';
-import photo25 from '../images/gifts/g2.jpg';
-import photo26 from '../images/gifts/g3.jpg';
-import photo27 from '../images/gifts/g4.jpg';
-import photo28 from '../images/gifts/g5.jpg';
-import photo29 from '../images/gifts/g6.jpg';
-import photo30 from '../images/gifts/g7.jpg';
-import photo32 from '../images/gifts/g9.jpg';
-import photo34 from '../images/henna/h1.jpg';
-import photo35 from '../images/henna/h2.jpg';
-import photo36 from '../images/henna/h3.jpg';
-import photo37 from '../images/henna/h4.jpg';
-import photo38 from '../images/henna/h5.jpg';
-import photo39 from '../images/henna/h6.jpg';
-import photo41 from '../images/henna/h8.jpg';
-import photo44 from '../images/henna/h11.jpg';
-import photo45 from '../images/henna/h12.jpg';
+import photo1 from '../images/frames/f1.webp';
+import photo2 from '../images/frames/f2.webp';
+import photo3 from '../images/frames/f3.webp';
+import photo4 from '../images/frames/f4.webp';
+import photo5 from '../images/frames/f5.webp';
+import photo6 from '../images/frames/f6.webp';
+import photo7 from '../images/frames/f7.webp';
+import photo8 from '../images/frames/f8.webp';
+import photo9 from '../images/frames/f9.webp';
+import photo10 from '../images/frames/f10.webp';
+import photo11 from '../images/frames/f11.webp';
+import photo12 from '../images/frames/f12.webp';
+import photo14 from '../images/bracelets/b1.webp';
+import photo15 from '../images/bracelets/b2.webp';
+import photo16 from '../images/bracelets/b3.webp';
+import photo17 from '../images/bracelets/b4.webp';
+import photo18 from '../images/bracelets/b5.webp';
+import photo19 from '../images/bracelets/b6.webp';
+import photo20 from '../images/bracelets/b7.webp';
+import photo22 from '../images/bracelets/b9.webp';
+import photo23 from '../images/bracelets/b10.webp';
+import photo24 from '../images/gifts/g1.webp';
+import photo25 from '../images/gifts/g2.webp';
+import photo26 from '../images/gifts/g3.webp';
+import photo27 from '../images/gifts/g4.webp';
+import photo28 from '../images/gifts/g5.webp';
+import photo29 from '../images/gifts/g6.webp';
+import photo30 from '../images/gifts/g7.webp';
+import photo32 from '../images/gifts/g9.webp';
+import photo34 from '../images/henna/h1.webp';
+import photo35 from '../images/henna/h2.webp';
+import photo36 from '../images/henna/h3.webp';
+import photo37 from '../images/henna/h4.webp';
+import photo38 from '../images/henna/h5.webp';
+import photo39 from '../images/henna/h6.webp';
+import photo41 from '../images/henna/h8.webp';
+import photo44 from '../images/henna/h11.webp';
+import photo45 from '../images/henna/h12.webp';
 
 const originalImages = [
   photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9,photo10
@@ -96,7 +95,7 @@ const QueueSlider = () => {
     <>
       <div className="scroll-container" id="gallery" ref={containerRef}>
         {images.map((src, index) => (
-          <img key={index} src={src} className="scroll-item" alt={`img-${index}`} />
+          <img key={index} src={src} className="scroll-item" alt={`img-${index}`} loading='lazy' />
         ))}
       </div>
 {/* 

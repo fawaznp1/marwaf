@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import marwaimage1 from '../images/logo2.jpg';
-import mehandi1 from '../images/henna/h1.jpg';
+import marwaimage1 from '../images/logo2.webp';
 import './Home.css';
 import './Lettera.css'
-import framesimage from '../images/frames/f1.jpg'
-import giftimage from '../images/gifts/g1.jpg'
-import brimage from '../images/bracelets/b1.jpg'
-import LazyImage from '../LazyImage';
 import PhotoSlider from '../components/PhotoSlider';
 import CustomerReviews from '../components/Review';
 import ScrollToTopButton from '../components/TopButton';
@@ -17,15 +12,15 @@ import Categories from '../components/Categories';
 function Home() {
   return (
     <>
-      <div className="container mt-2">
+      <div className="container mt-1">
         <div className="row">
-          <div className="col-md-6 d-flex align-items-center justify-content-center mt-3">
+          <div className="col-md-6 d-flex align-items-center justify-content-center mt-1">
             <img
               src={marwaimage1}
               alt="marwaimage"
               className="homeimage img-fluid  "
               
-            />
+            /> 
           </div>
           <div className="col-md-6 d-flex align-items-center mt-2">
             <div> 

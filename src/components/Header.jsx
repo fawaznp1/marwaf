@@ -74,10 +74,10 @@ function Header() {
            {/*  <li className="nav-item">
               <Link className="nav-link me-2 active" to="#gallery" onClick={handleLinkClick}>Gallery</Link>
             </li> */}
-            <li className="nav-item">
+            {/* <li className="nav-item">
                <Link className="nav-link active" to="/contact" onClick={handleLinkClick}>Contact Us</Link> 
              
-              </li>
+              </li> */}
             <li className="nav-item">
               <Link className="nav-link me-2 active" to="/custom" onClick={handleLinkClick}>Customization</Link>
             </li>

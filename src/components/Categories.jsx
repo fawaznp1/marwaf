@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import framesimage from '../images/frames/f1.jpg'
-import giftimage from '../images/gifts/g1.jpg'
-import brimage from '../images/bracelets/b1.jpg'
+import framesimage from '../images/frames/f1.webp'
+import giftimage from '../images/gifts/g1.webp'
+import brimage from '../images/bracelets/b1.webp'
 import LazyImage from '../LazyImage';
-import mehandi1 from '../images/henna/h1.jpg';
+import mehandi1 from '../images/henna/h1.webp';
 import './Categories.css'
 
 const cardData = [
@@ -73,6 +73,7 @@ export default function Categories() {
                   src={item.image}
                   className="card-img-top"
                   alt={item.alt}
+                  
                 />
                 <div className="card-body d-flex flex-column justify-content-between">
                   <h5 className="card-title">{item.title}</h5>

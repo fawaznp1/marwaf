@@ -69,7 +69,7 @@ export default function App() {
           </MDBRow>
         </section>
               
-        <section className=''>
+        {/* <section className=''>
           <form action=''>
             <MDBRow className='d-flex justify-content-center'>
               <MDBCol size="auto">
@@ -93,7 +93,7 @@ export default function App() {
             </MDBRow>
           </form>
         </section>
-
+ */}
         <section className='mb-2 mt-3'>
           <p>
             Connecting you with quality and care – Marwa Arts, your one-stop destination for unique art.
@@ -107,7 +107,7 @@ export default function App() {
         
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className=' p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
           
           <a href="/privacynpolicy"  className="text-white me-2">Privacy Policy</a> 
           <a href="/terms" className="text-white ms-2">Terms of Service</a>

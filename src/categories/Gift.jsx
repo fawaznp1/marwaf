@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { useCart } from "../pages/Cartcontext";
 import { useNavigate } from 'react-router-dom';
-import brace1 from '../images/gifts/g1.jpg';
-import brace2 from '../images/gifts/g2.jpg';
-import brace3 from '../images/gifts/g3.jpg';
-import brace4 from '../images/gifts/g4.jpg';
-import brace5 from '../images/gifts/g5.jpg';
-import brace6 from '../images/gifts/g6.jpg';
-import brace7 from '../images/gifts/g13.jpg';
-import brace9 from '../images/gifts/g9.jpg';
+import brace1 from '../images/gifts/g1.webp';
+import brace2 from '../images/gifts/g2.webp';
+import brace3 from '../images/gifts/g3.webp';
+import brace4 from '../images/gifts/g4.webp';
+import brace5 from '../images/gifts/g5.webp';
+import brace6 from '../images/gifts/g6.webp';
+import brace7 from '../images/gifts/g13.webp';
+import brace9 from '../images/gifts/g9.webp';
 import brace10 from '../images/gifts/g10.webp';
-import brace11 from '../images/gifts/g11.jpg';
+import brace11 from '../images/gifts/g11.webp';
 import brace12 from '../images/gifts/g12.webp';
-import brace13 from '../images/gifts/g14.jpeg';
+import brace13 from '../images/gifts/g14.webp';
 import LazyImage from '../LazyImage';
 
 import './Frames.css';
@@ -162,7 +162,7 @@ function Bracelet() {
 
   return (
     <>
-    <h3 className="text-center explore-frames-title">Explore Unique Gifts</h3>
+    <h3 className="text-center explore-frames-title">Explore  Gifts</h3>
 
     <div className="frames card-grid mb-5" style={containerStyle}>
       <div className="card-container" style={carouselContainerStyle}>
