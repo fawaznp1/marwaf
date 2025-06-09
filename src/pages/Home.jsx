@@ -69,7 +69,7 @@ function Home() {
   <div className="row g-4 align-items-center">
     <div className="col-md-6">
       <h3 className="mb-3">🎥 Watch Our Videos</h3>
-      <div className="ratio ratio-16x9 shadow rounded-4">
+      <div className="ratio ratio-16x9 shadow rounded-4 ">
         <iframe
           src="https://www.youtube.com/embed/KmbZApRs4X0?si=YGgnBuhwnh7AGYi6"
           title="YouTube video player"

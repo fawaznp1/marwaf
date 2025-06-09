@@ -1,123 +1,174 @@
 import React from 'react';
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import {
   MDBFooter,
   MDBContainer,
   MDBIcon,
-  MDBInput,
   MDBCol,
   MDBRow,
   MDBBtn
 } from 'mdb-react-ui-kit';
 
 export default function App() {
-  const [show, setShow] = useState(false);
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
 
-
-
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    // Here you would typically send the email to your backend
+    console.log('Subscribed with:', email);
+    setSubscribed(true);
+    setEmail('');
+    setTimeout(() => setSubscribed(false), 3000);
+  };
 
   return (
-
-<>
-<style>
+    <>
+      <style>
         {`
-          .m-1:focus,
-          .m-1:active {
-            outline: none; /* Removes the default browser focus outline */
-            box-shadow: none; /* Prevents extra shadow or glow effects */
-            transform: none; /* Disables scaling or zoom effects */
-          },
-           @media (max-width: 576px) {
-    .social-btn {
-      width: 40px;
-      height: 35px;
-      padding: 8px;
-    }
-  }
+          .footer-link {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+          }
+          .footer-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+          }
+          .social-btn {
+            width: 50px;
+            height: 40px;
+            line-height: 1;
+            padding: 10px;
+            transition: transform 0.2s ease, background-color 0.3s ease !important;
+          }
+          .social-btn:hover {
+            transform: translateY(-3px);
+            background-color: rgba(255,255,255,0.1) !important;
+          }
+          .newsletter-input {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+          }
+          .newsletter-input:focus {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            box-shadow: 0 0 0 0.25rem rgba(255,255,255,0.25);
+          }
+          .newsletter-btn {
+            background-color: #0d6efd;
+            border: none;
+          }
+          .newsletter-btn:hover {
+            background-color: #0b5ed7;
+          }
+          
+          @media (max-width: 768px) {
+            .social-btn {
+              width: 45px;
+              height: 38px;
+            }
+            .footer-text {
+              text-align: center;
+            }
+          }
+          @media (max-width: 576px) {
+            .social-btn {
+              width: 40px;
+              height: 35px;
+            }
+          }
         `}
       </style>
     
-    <MDBFooter  className='text-center mt-3' color='white' bgColor='dark'>
-      <MDBContainer className='p-4'>
-        <section className='mb-4'  >
-          <MDBRow>
-            <MDBCol xs='auto' className='d-flex justify-content-center'>
-             
-
-              <MDBBtn outline color="light" floating className='m-1' style={{ width: '50px', 
-        height: '40px', 
-        lineHeight: '1', 
-        padding: '10px',transition:'none'}} href='https://www.instagram.com/marwarts.in/profilecard/?igsh=MXdqejk0eHM5NnI2OA==' target='_blank' role='button'>
-                <MDBIcon fab icon='instagram' />
-              </MDBBtn>
-
-              <MDBBtn outline color="light" floating className='m-1' style={{ width: '50px', 
-        height: '40px', 
-        lineHeight: '1', 
-        padding: '10px',transition:'none'}} href='https://www.youtube.com/@marwanp5290' target='_blank' role='button'>
-                <MDBIcon fab icon='youtube' />
-              </MDBBtn>
-              <MDBBtn outline color="light" floating className='m-1' style={{ width: '50px', 
-        height: '40px', 
-        lineHeight: '1', 
-        padding: '10px',transition:'none'}} href='mailto:marwaarts.in@gmail.com' target='_blank' role='button'>
-                <MDBIcon fas icon='envelope' />
-              </MDBBtn>
-            </MDBCol>
-          </MDBRow>
-        </section>
-              
-        {/* <section className=''>
-          <form action=''>
-            <MDBRow className='d-flex justify-content-center'>
-              <MDBCol size="auto">
-                <p className='pt-2'>
-                  <strong>Sign up for latest updates</strong>
+      <MDBFooter className='text-center mt-auto' color='white' bgColor='dark'>
+        <MDBContainer className='p-4'>
+          <section className='mb-2'>
+            <MDBRow className='justify-content-center d-block d-flex'>
+              <MDBCol md='8' lg='6' style={{ display: 'block' }}>
+                <h5 className='text-uppercase mb-4'>Stay Connected</h5>
+                <p>
+                  Follow us on social media to stay updated with our latest products and offers.
                 </p>
-              </MDBCol>
+                
+                <div className='d-flex justify-content-center flex-wrap'>
+                  <MDBBtn 
+                    outline 
+                    color="light" 
+                    floating 
+                    className='m-1 social-btn' 
+                    href='https://www.instagram.com/marwarts.in/profilecard/?igsh=MXdqejk0eHM5NnI2OA==' 
+                    target='_blank' 
+                    role='button'
+                  >
+                    <MDBIcon fab icon='instagram' />
+                  </MDBBtn>
 
-              <MDBCol md='5' xs="12">
-                <MDBInput contrast type='email' placeholder='Email address' className='mb-4' />
+                  <MDBBtn 
+                    outline 
+                    color="light" 
+                    floating 
+                    className='m-1 social-btn' 
+                    href='https://www.youtube.com/@marwanp5290' 
+                    target='_blank' 
+                    role='button'
+                  >
+                    <MDBIcon fab icon='youtube' />
+                  </MDBBtn>
+                  
+                  <MDBBtn 
+                    outline 
+                    color="light" 
+                    floating 
+                    className='m-1 social-btn' 
+                    href='mailto:marwaarts.in@gmail.com' 
+                    target='_blank' 
+                    role='button'
+                  >
+                    <MDBIcon fas icon='envelope' />
+                  </MDBBtn>
+                </div>
               </MDBCol>
-
-              <MDBCol size="auto">
-                <MDBBtn outline color='light' type='submit' href='' style={{ width: '100px', 
-        height: '40px', 
-        lineHeight: '1', 
-        padding: '10px',transition:'none'}} className='mb-4'>
-                  Subscribe
+               <MDBCol md='8' lg='6' style={{ display: 'block' }}>
+                <h5 className='text-uppercase mb-4'>Advertise With Us!</h5>
+                <p className='mb-4'>
+                  Promote your business on our platform. Contact us today to discover advertising & promotional opportunities. 
+                  Reach your audience effortlessly!
+                </p>
+                <MDBBtn 
+                  color='primary' 
+                  href='mailto:marwaarts.in@gmail.com?subject=Advertising Inquiry'
+                  className='mb-3'
+                >
+                  Contact for Advertising
                 </MDBBtn>
               </MDBCol>
             </MDBRow>
-          </form>
-        </section>
- */}
-        <section className='mb-2 mt-3'>
-          <p>
-            Connecting you with quality and care – Marwa Arts, your one-stop destination for unique art.
-          </p>
-          <hr />
-          <h3>Advertise With Us!</h3>
-          <p>
-          Promote your business on our platform. Contact us today to discover advertising & promotional opportunities. Reach your audience effortlessly!
-          </p>
-        </section>
-        
-      </MDBContainer>
+          </section>
+              
+        </MDBContainer>
 
-      <div className=' p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-          
-          <a href="/privacynpolicy"  className="text-white me-2">Privacy Policy</a> 
-          <a href="/terms" className="text-white ms-2">Terms of Service</a>
-          <p className='mt-4'>Developed by fawaz_np <a href="https://fawaznp.vercel.app/" className='text-white' target='_blank'><i className="fa-solid fa-up-right-from-square"></i></a></p> 
-          <p>
-             &copy; {new Date().getFullYear()} @ marwaarts.in. All Rights Reserved.
-          </p>
-          </div>
-    </MDBFooter>
-
+        <div className='p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+          <MDBContainer>
+            <div className='d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mb-3'>
+              <a href="/privacynpolicy" className="footer-link me-3">Privacy Policy</a>
+              <span className='d-none d-md-block'>|</span>
+              <a href="/terms" className="footer-link ms-3 me-3">Terms of Service</a>
+            </div>
+            
+            <p className='mb-2'>
+              Developed by <a href="https://fawaznp.vercel.app/" className='footer-link' target='_blank' rel='noopener noreferrer'>
+                fawaz_np <MDBIcon fas icon='external-link-alt' size='xs' />
+              </a>
+            </p>
+            
+            <p className='mb-0'>
+              &copy; {new Date().getFullYear()} Marwa Arts. All Rights Reserved.
+            </p>
+          </MDBContainer>
+        </div>
+      </MDBFooter>
     </>
   );
 }
